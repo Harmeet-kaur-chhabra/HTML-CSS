@@ -1,114 +1,132 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
 <head>
-<style>
-
-*{
-  padding-top: 30px;
-  background: #f5f7f8;
-  
+<meta charset="UTF-8">
+<title>CSS Exercise 1</title>
+<style type="text/css">
+body {
+	text-align: center;
+	color: white;
 }
-
-.grid {
-  display: grid;
-  grid-template-columns: 200px 200px 200px;
-  grid-template-rows: 100px  100px  100px;
-	grid-gap: 4px;
-
+h1 {
+	color: lightblue;
 }
-
-/* items */
-
-.grid div {
-  color: white;
-  font-size: 15px;
-  padding: 5px;
-  
-  }
-
-/* inner girde 1*/
-#inner-grid {
-  display: grid;
-  grid-template-columns: 4fr 4fr;
-  grid-gap: 1px;
+.layout {
+	display: grid;
+	grid-template-columns: auto auto auto;
+	padding: 05px;
 }
-#inner-grid > div {
-  background: lightgreen;
-  padding: 1px;
- 
- 
+.div-item {
+	border: 1px solid rgba(0, 0, 0, 0.8);
+	margin: 05px;
+	font-size: 20px;
+	text-align: center;
+	width: 430px;
+	height: 125px;
 }
-
-/* specific item styles */
-
-.item-1 {
-  background: #ff0000;
-
+.one {
+	background: red;
 }
-.item-2 {
-  background: #d2691e;
+.two {
+	background: orange;
 }
-.item-3 {
-  background: #008000;
+.three {
+	background: green;
 }
-
-.item-4 {
-  background: #FFFF00;
+.three  td {
+	border: 2px solid green;
+	background: lightgreen;
 }
-.item-5 {
-	  background: #8A2BE2;
+.three tr, td {
+	height: auto;
+	width: 193.5px;
 }
-.item-6 {
-  background: #0000FF;
+.four {
+	background: yellow;
 }
-.item-7 {
-  background: #ff69b4;
+.four div {
+	height: 30px;
+	margin-left: 2px;
+	margin-right: 2px;
+	width: 135px;
 }
-.item-8 {
-  background: #00008B;
+.five, .four_one {
+	background: #9B59B6;
 }
-.item-9 {
-  background: #8B0000;
+.four_two {
+	margin-top: 28px;
+	background: #C39BD3;
 }
-
-
+.four_three {
+	margin-top: 53px;
+}
+.six {
+	background: blue;
+}
+.seven {
+	background: pink;
+}
+.eight, .four_three {
+	background: navy;
+}
+.nine {
+	background: brown;
+}
+.nine td {
+	background: #EC7063;
+	border: 2px solid brown;
+}
 </style>
-<meta charset="ISO-8859-1">
-<title>Labrador Retriever</title>
 </head>
 <body>
-
-	<h1 style="color:DodgerBlue;" >CSS Gride</h1>
-	<div class="grid" align=center  id="outer-grid">
-		<div class="item-1" >BOX 1</div>
-  		<div class="item-2">BOX 2</div>
-  		<div class="item-3">BOX 3
-		 <div id="inner-grid">
-    			<div class="item">3.1</div>
-    			<div>3.2</div>
-    			<div>3.3</div>
-    			<div>3.4</div>
-			<div>3.5</div>
-  			<div>3.6</div>	
+	<h1>CSS Grid</h1>
+	<div class="layout">
+		<div class="div-item one">BOX 1</div>
+		<div class="div-item two">BOX 2</div>
+		<div class="div-item three">
+			BOX 3
+			<table>
+				<tr>
+					<td>3.1</td>
+					<td>3.2</td>
+				</tr>
+				<tr>
+					<td>3.3</td>
+					<td>3.4</td>
+				</tr>
+				<tr>
+					<td>3.5</td>
+					<td>3.6</td>
+				</tr>
+			</table>
 		</div>
+		<div class="div-item four">
+			BOX 4
+			<div class="layout">
+				<div class="four-sub four_one">4.1</div>
+				<div class="four-sub four_two">4.2</div>
+				<div class="four-sub four_three">4.3</div>
+			</div>
 		</div>
-
- 		<div class="item-4">BOX 4
-		<div id="inner-grid">
-			<div>4.1</div>
-    			<div>4.2</div>
-    			<div>4.3</div>
-
-		</div></div>
-
-  		<div class="item-5">BOX 5</div>
-  		<div class="item-6">BOX 6</div>
-  		<div class="item-7">BOX 7</div>
-  		<div class="item-8">BOX 8</div>
-  		<div class="item-9">BOX 9</div>
+		<div class="div-item five">
+			BOX 5<br>
+		</div>
+		<div class="div-item six">BOX 6</div>
+		<div class="div-item seven">BOX 7</div>
+		<div class="div-item eight">BOX 8</div>
+		<div class="div-item nine">
+			BOX 9
+			<table>
+				<tr>
+					<td>9.1</td>
+					<td>9.2</td>
+					<td>9.3</td>
+					<td>9.4</td>
+				</tr>
+			</table>
+		</div>
 	</div>
-
-</body>	
-<html>
-
-
+</body>
+</html>
